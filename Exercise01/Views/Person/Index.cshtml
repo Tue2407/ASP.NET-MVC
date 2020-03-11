@@ -1,0 +1,26 @@
+﻿@model IEnumerable<Exercise01.Models.Person>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        @{
+            foreach (var p in Model)
+            {
+                <h1>
+                    @Html.ActionLink(p.Name, "Details", new { id = p.PersonId });
+                </h1>
+            }
+        }
+    </div>
+</body>
+</html>

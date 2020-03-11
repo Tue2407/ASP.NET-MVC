@@ -18,7 +18,12 @@ namespace Exercise03.Controllers
         public ActionResult Index(FormCollection formCollection)
         {
             int hours = Convert.ToInt32(formCollection["Hours"]);
-            return View("Result", hours);
+            int minutes = Convert.ToInt32(formCollection["Minutes"]);
+            int seconds = Convert.ToInt32(formCollection["seconds"]);
+            int totalTime = hours * 3600 + minutes * 60 + seconds;
+            string s = hours + " hours + " + minutes + " minutes + " + seconds + " seconds = " +
+                totalTime + " seconds in total";
+            return View("Result", "", s);
         }
     }
 }

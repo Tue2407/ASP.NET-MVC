@@ -1,4 +1,5 @@
-﻿@model string
+﻿@model Exercise01.Models.Person
+
 @{
     Layout = null;
 }
@@ -8,14 +9,11 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>Result</title>
+    <title>Details</title>
 </head>
 <body>
     <div> 
-        <h1>
-            Result
-        </h1>
-        @Model
+          navn: @Model.Name <br /> Fødselsdag: @Model.Birthday
     </div>
 </body>
 </html>
